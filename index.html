@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademeX Class 7th CBSE Portal | Pratap Sanjay Kumar</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ea580c;
+            border-radius: 9999px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ea580c 0%, #d97706 50%, #e11d48 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- TOP ANNOUNCEMENT & SOCIAL BAR -->
+    <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="bg-orange-500/20 text-orange-400 text-xs px-2 py-0.5 rounded-full border border-orange-500/30 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-ping"></span> Live Portal
+                </span>
+                <span class="hidden md:inline">CBSE Class 7th Middle School Foundation, Handwritten Notes &amp; Blog Hub</span>
+                <span class="md:hidden">CBSE Class 7th Hub</span>
+            </div>
+            
+            <div class="flex items-center space-x-3 text-slate-300">
+                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp">
+                    <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                </a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram">
+                    <i class="fab fa-telegram text-sm sm:text-base"></i>
+                </a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube">
+                    <i class="fab fa-youtube text-sm sm:text-base"></i>
+                </a>
+                <button id="themeToggle" class="ml-2 p-1 text-slate-400 hover:text-orange-400 transition-colors" title="Toggle Theme">
+                    <i id="themeIcon" class="fas fa-sun text-xs sm:text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand Logo -->
+                <a href="https://pratapsanjaykumar.github.io/homepage/" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        AX
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
+                            Academe<span class="text-orange-500">X</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-[10px] font-bold px-2 py-0.5 rounded-md border border-orange-300 dark:border-orange-700">7th CBSE</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Mentored by Pratap Sanjay Kumar</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#home" class="text-orange-600 dark:text-orange-400 font-semibold">Home</a>
+                    <a href="#subjects" class="text-slate-600 dark:text-slate-300 hover:text-orange-500 transition-colors">Subjects</a>
+                    <a href="#chaptersDirectory" class="text-slate-600 dark:text-slate-300 hover:text-orange-500 transition-colors font-bold text-orange-600 dark:text-orange-400">Class 7 Notes Directory</a>
+                    <a href="#allClassesExplore" class="text-slate-600 dark:text-slate-300 hover:text-orange-500 transition-colors">All Classes</a>
+                    <a href="#lectures" class="text-slate-600 dark:text-slate-300 hover:text-orange-500 transition-colors">Video Lectures</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="flex items-center space-x-3">
+                    <a href="https://pratapsanjaykumar.github.io/homepage/" class="hidden sm:inline-flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 transition-all">
+                        <i class="fas fa-th-large text-orange-500"></i>
+                        <span>All Portals</span>
+                    </a>
+
+                    <a href="https://wa.me/917808343396" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all hover:shadow-lg">
+                        <i class="fab fa-whatsapp text-sm"></i>
+                        <span>Ask Doubts</span>
+                    </a>
+                    
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-orange-500">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="#home" class="block py-2 px-3 rounded-lg bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">Home</a>
+            <a href="#subjects" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Subjects Overview</a>
+            <a href="#chaptersDirectory" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold text-orange-500">Class 7 Chapter Directory</a>
+            <a href="#allClassesExplore" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">All Class Portals</a>
+            <a href="#lectures" class="block py-2 px-3 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Video Lectures</a>
+            <a href="https://pratapsanjaykumar.github.io/homepage/" class="block py-2 px-3 rounded-lg font-semibold text-orange-500 hover:bg-slate-100 dark:hover:bg-slate-800">Explore All Portals</a>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-around">
+                <a href="https://wa.me/917808343396" target="_blank" class="text-emerald-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/pratapsanjaysir" target="_blank" class="text-sky-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="text-red-500 font-semibold text-xs flex items-center gap-1.5 py-1">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 bg-gradient-to-b from-orange-50/70 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-orange-400/20 to-amber-300/20 dark:from-orange-600/10 dark:to-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-100 dark:bg-orange-900/50 text-orange-800 dark:text-orange-300 text-xs font-semibold border border-orange-200 dark:border-orange-800 shadow-sm">
+                        <i class="fas fa-graduation-cap"></i> Complete CBSE Board Class 7th Middle School Curriculum
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Excellence in <span class="gradient-text">Class 7th</span> CBSE Foundation
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Access chapter-wise standalone <strong>HTML Notes Pages</strong> (<code class="bg-slate-200 dark:bg-slate-800 px-1 py-0.5 rounded text-xs">science_1.html</code>, <code class="bg-slate-200 dark:bg-slate-800 px-1 py-0.5 rounded text-xs">math_1.html</code>, <code class="bg-slate-200 dark:bg-slate-800 px-1 py-0.5 rounded text-xs">sst_1.html</code>, <code class="bg-slate-200 dark:bg-slate-800 px-1 py-0.5 rounded text-xs">computer_1.html</code>) and official <strong>Blog Posts</strong> mentored by <strong class="text-slate-900 dark:text-white">Pratap Sanjay Kumar</strong>.
+                    </p>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="#chaptersDirectory" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all flex items-center gap-2">
+                            <i class="fas fa-list-check"></i> Explore Class 7 Chapters &amp; Notes
+                        </a>
+                        <a href="https://pratapsanjaykumar.github.io/homepage/" class="bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3.5 rounded-xl shadow-md transition-all flex items-center gap-2">
+                            <i class="fas fa-layer-group"></i> All Classes (6th-12th)
+                        </a>
+                    </div>
+
+                    <!-- Social Direct Buttons -->
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
+                        <span>Connect for Guidance:</span>
+                        <a href="https://wa.me/917808343396" target="_blank" class="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 hover:underline">
+                            <i class="fab fa-whatsapp text-base"></i> WhatsApp Help
+                        </a>
+                        <a href="https://t.me/pratapsanjaysir" target="_blank" class="flex items-center gap-1.5 text-sky-600 dark:text-sky-400 hover:underline">
+                            <i class="fab fa-telegram text-base"></i> Telegram Channel
+                        </a>
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="flex items-center gap-1.5 text-red-600 dark:text-red-400 hover:underline">
+                            <i class="fab fa-youtube text-base"></i> YouTube Channel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Mentor Profile Spotlight -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-sm rounded-3xl p-6 glass-card shadow-xl border border-slate-200 dark:border-slate-800 relative group">
+                        
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[10px] uppercase font-black px-3 py-1 rounded-full shadow-md">
+                            Head Mentor &amp; Director
+                        </div>
+
+                        <div class="text-center space-y-4 pt-2">
+                            <div class="relative w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-orange-500 via-amber-400 to-yellow-400 shadow-xl">
+                                <img src="Pratap Sanjay Kumar.png" 
+                                     alt="Pratap Sanjay Kumar" 
+                                     onerror="this.onerror=null; this.src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png';" 
+                                     class="w-full h-full object-cover rounded-full bg-slate-100 dark:bg-slate-800">
+                                <div class="absolute bottom-1 right-1 w-7 h-7 bg-emerald-500 border-2 border-white dark:border-slate-900 rounded-full flex items-center justify-center text-white text-xs" title="Verified Educator">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Pratap Sanjay Kumar</h3>
+                                <p class="text-xs text-orange-600 dark:text-orange-400 font-semibold mt-0.5">Senior CBSE Educator &amp; Mentor</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 px-2">
+                                    Simplifying Class 7th concepts so learners enter senior school with crystalline clarity, high confidence, and stellar scores.
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-center space-x-3 pt-2">
+                                <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp">
+                                    <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                                </a>
+                                <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram">
+                                    <i class="fab fa-telegram text-sm sm:text-base"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube">
+                                    <i class="fab fa-youtube text-sm sm:text-base"></i>
+                                </a>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 text-left pt-2 border-t border-slate-200 dark:border-slate-800 text-xs">
+                                <div class="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">Class 7th Hub</div>
+                                    <div class="text-slate-500 text-[11px]">Notes + Blog Direct</div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                                    <div class="font-bold text-slate-900 dark:text-white text-sm">100% Free</div>
+                                    <div class="text-slate-500 text-[11px]">Direct HTML Links</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER BAR -->
+    <section class="py-6 bg-orange-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">100%</div>
+                <div class="text-xs text-orange-100 font-medium uppercase tracking-wider">NCERT Class 7th Syllabus</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">Dual-Format</div>
+                <div class="text-xs text-orange-100 font-medium uppercase tracking-wider">HTML Notes &amp; Blog Posts</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">20,000+</div>
+                <div class="text-xs text-orange-100 font-medium uppercase tracking-wider">Class 7 Learners</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-2xl sm:text-3xl font-extrabold">24x7</div>
+                <div class="text-xs text-orange-100 font-medium uppercase tracking-wider">WhatsApp Doubts Desk</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBJECTS OVERVIEW -->
+    <section id="subjects" class="py-12 bg-slate-100/70 dark:bg-slate-900/60 text-slate-900 dark:text-white transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400 mb-2">Class 7th Subjects</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">CBSE Core Curriculum</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Click any subject below to switch instantly and scroll down to chapter-wise notes and blog links.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Mini Card Science -->
+                <div onclick="selectAndScrollSubject('science')" class="cursor-pointer bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/60 hover:shadow-lg transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Science (Intro + 13 Ch)</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Introduction Class, Nutrition in plants/animals, Heat, Acids, Respiration, Motion &amp; Light.</p>
+                    </div>
+                    <button type="button" class="mt-4 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                        <span>View Science Chapters</span> <i class="fas fa-arrow-down text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Mini Card Maths -->
+                <div onclick="selectAndScrollSubject('math')" class="cursor-pointer bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-sky-500/60 hover:shadow-lg transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">Mathematics (13 Ch)</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Integers, Fractions, Simple Equations, Triangles, Comparing Quantities &amp; Perimeter/Area.</p>
+                    </div>
+                    <button type="button" class="mt-4 text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                        <span>View Maths Chapters</span> <i class="fas fa-arrow-down text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Mini Card SST -->
+                <div onclick="selectAndScrollSubject('sst')" class="cursor-pointer bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-amber-500/60 hover:shadow-lg transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Social Science (Intro + 13 Ch)</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Introduction Class, History (Our Pasts-II), Geography (Our Environment) &amp; Civics.</p>
+                    </div>
+                    <button type="button" class="mt-4 text-xs font-bold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                        <span>View SST Chapters</span> <i class="fas fa-arrow-down text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Mini Card Computer -->
+                <div onclick="selectAndScrollSubject('computer')" class="cursor-pointer bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-purple-500/60 hover:shadow-lg transition-all duration-200 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Computer Science (7 Ch)</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Number Systems, Excel formulas/charts, HTML basics, Cyber safety &amp; Python fundamentals.</p>
+                    </div>
+                    <button type="button" class="mt-4 text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                        <span>View Computer Chapters</span> <i class="fas fa-arrow-down text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SUBJECT-WISE CHAPTERS DIRECTORY -->
+    <section id="chaptersDirectory" class="py-16 bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-xs font-semibold mb-2">
+                        <i class="fas fa-folder-tree"></i> Class 7th Chapter Directory
+                    </div>
+                    <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+                        Subject-Wise Chapter Notes &amp; Blogs
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+                        Each chapter provides two direct access routes: <strong class="text-orange-600 dark:text-orange-400">Notes Page (HTML: subject_id.html)</strong> and <strong class="text-emerald-600 dark:text-emerald-400">Blog Article</strong>.
+                    </p>
+                </div>
+
+                <!-- Instant Chapter Search Input -->
+                <div class="relative w-full md:w-72">
+                    <input type="text" id="chapterSearchInput" onkeyup="filterChapters()" placeholder="Search any Class 7 chapter..." 
+                           class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs rounded-xl pl-9 pr-4 py-2.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <i class="fas fa-search absolute left-3 top-3 text-slate-400 text-xs"></i>
+                </div>
+            </div>
+
+            <!-- Subject Tabs Navigation -->
+            <div class="flex flex-wrap items-center gap-2 mb-8">
+                <button onclick="switchSubjectTab('science')" id="tab-btn-science" class="subject-tab-btn active px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-emerald-600 text-white shadow-md">
+                    <i class="fas fa-flask"></i> Science Notes
+                </button>
+                <button onclick="switchSubjectTab('math')" id="tab-btn-math" class="subject-tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800">
+                    <i class="fas fa-calculator"></i> Mathematics
+                </button>
+                <button onclick="switchSubjectTab('sst')" id="tab-btn-sst" class="subject-tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800">
+                    <i class="fas fa-globe-asia"></i> Social Science
+                </button>
+                <button onclick="switchSubjectTab('computer')" id="tab-btn-computer" class="subject-tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800">
+                    <i class="fas fa-desktop"></i> Computer Science
+                </button>
+            </div>
+
+            <!-- Subject Hub Banner Information -->
+            <div id="subjectBannerInfo" class="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/50 flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div id="bannerIcon" class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-sm font-bold">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div>
+                        <h4 id="bannerTitle" class="font-extrabold text-sm text-slate-900 dark:text-white">Class 7th Science Chapter Modules</h4>
+                        <p id="bannerDesc" class="text-xs text-slate-500 dark:text-slate-400">13 Chapters covering Physics, Chemistry, and Biology NCERT Class 7 fundamentals.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a id="bannerBlogLink" href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Science" target="_blank" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 transition">
+                        <i class="fas fa-blog"></i> All Science Blog Posts
+                    </a>
+                </div>
+            </div>
+
+            <!-- Chapter Cards Container (Populated via JS) -->
+            <div id="chaptersContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Chapters will be rendered here dynamically -->
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="noResultsState" class="hidden text-center py-12">
+                <i class="fas fa-folder-open text-4xl text-slate-400 mb-3"></i>
+                <h4 class="text-base font-bold text-slate-700 dark:text-slate-300">No matching Class 7 chapters found</h4>
+                <p class="text-xs text-slate-500">Please try typing a different chapter name or topic.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DEDICATED EXPLORE ALL CLASS NOTES BOX -->
+    <section id="allClassesExplore" class="py-12 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="space-y-2 text-center lg:text-left z-10">
+                    <span class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-orange-50">
+                        <i class="fas fa-compass"></i> Complete Educational Ecosystem
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                        Explore All Class Notes (Classes 6th to 12th)
+                    </h3>
+                    <p class="text-xs sm:text-sm text-orange-100 max-w-2xl leading-relaxed">
+                        Access dedicated portals for Class 6th, 7th, 8th, 9th, 10th, 11th, and 12th along with NCERT books, question banks, and competitive guides from Pratap Sanjay Sir.
+                    </p>
+                </div>
+
+                <div class="z-10 shrink-0 w-full lg:w-auto text-center">
+                    <a href="https://pratapsanjaykumar.github.io/homepage/" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-sm px-7 py-4 rounded-2xl shadow-xl transition-all transform hover:scale-105 active:scale-95 w-full sm:w-auto">
+                        <i class="fas fa-graduation-cap text-orange-600 text-lg"></i>
+                        <span>Explore All Class Notes Portal</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO LECTURES SHOWCASE -->
+    <section id="lectures" class="py-16 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400">AcademeX YouTube Lectures</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Learn From Pratap Sanjay Sir</h3>
+                </div>
+                <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all shadow-md">
+                    <i class="fab fa-youtube text-sm"></i> Visit @AcademeX10th Channel
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Video Card 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/059669/ffffff?text=Class+7th+Science+Nutrition" alt="Class 7 Science Nutrition" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-500 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded">Science Biology</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Nutrition in Plants &amp; Animals Complete Conceptual Clarity</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Autotrophic vs heterotrophic, photosynthesis steps, and digestive system diagrams.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/0284c7/ffffff?text=Class+7th+Mathematics+Integers" alt="Class 7 Maths Integers" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-sky-500 bg-sky-50 dark:bg-sky-950/50 px-2 py-0.5 rounded">Mathematics</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Integers &amp; Simple Equations Masterclass in 1 Shot</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Rules of signs, multiplication &amp; division properties, and algebraic equations.</p>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="relative aspect-video bg-slate-800 flex items-center justify-center">
+                        <img src="https://placehold.co/600x337/d97706/ffffff?text=Class+7th+Science+Physics+Heat" alt="Class 7 Heat and Temperature" class="w-full h-full object-cover">
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-500 bg-amber-50 dark:bg-amber-950/50 px-2 py-0.5 rounded">Science Physics</span>
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2">Heat &amp; Motion and Time | Complete NCERT Solutions</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Conduction, convection, radiation, clinical thermometer, and speed graphs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="font-extrabold text-xl text-white flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center text-white text-base">AX</div>
+                        AcademeX <span class="text-orange-400 text-sm">7th CBSE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Dedicated academic portal for CBSE Class 7th middle school students providing quality chapter-wise HTML notes pages, NCERT solutions, blog posts, and mentorship under Pratap Sanjay Kumar.
+                    </p>
+
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="https://wa.me/917808343396" target="_blank" class="hover:text-emerald-400 transition-colors p-1" title="WhatsApp"><i class="fab fa-whatsapp text-sm sm:text-base"></i></a>
+                        <a href="https://t.me/pratapsanjaysir" target="_blank" class="hover:text-sky-400 transition-colors p-1" title="Telegram"><i class="fab fa-telegram text-sm sm:text-base"></i></a>
+                        <a href="https://www.youtube.com/@AcademeX10th" target="_blank" class="hover:text-red-500 transition-colors p-1" title="YouTube"><i class="fab fa-youtube text-sm sm:text-base"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Academic Classes Navigation List -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Academic Classes</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_12th.html" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 12th I.Sc.</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_11th.html" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 11th Science</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_10th.html" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 10th Board</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_9th.html" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 9th Foundation</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_8th.html" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 8th Notes</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_7th.html" target="_blank" class="hover:text-orange-400 transition font-bold text-orange-400"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 7th Notes (Active)</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/Class_6th.html" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-angle-right mr-1.5 text-orange-400"></i> Class 6th Notes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Class 7 Quick Access</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Science" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-flask mr-1.5 text-orange-400"></i> Class 7th Science Blog</a></li>
+                        <li><a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Physics" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-bolt mr-1.5 text-orange-400"></i> Class 7th Physics</a></li>
+                        <li><a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/chemistry" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-vial mr-1.5 text-orange-400"></i> Class 7th Chemistry</a></li>
+                        <li><a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Math" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-calculator mr-1.5 text-orange-400"></i> Class 7th Mathematics</a></li>
+                        <li><a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Social%20Science" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-globe-asia mr-1.5 text-orange-400"></i> Class 7th Social Science</a></li>
+                        <li><a href="https://class7th-pratapsanjaysir.blogspot.com/search/label/Computer" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-desktop mr-1.5 text-orange-400"></i> Class 7th Computer</a></li>
+                        <li><a href="https://pratapsanjaykumar.github.io/homepage/" target="_blank" class="hover:text-orange-400 transition"><i class="fas fa-th-large mr-1.5 text-orange-400"></i> All Class Notes Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Mentor & Contact Card -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Director &amp; Mentor</h4>
+                    <div class="flex items-center gap-3">
+                        <img src="Pratap Sanjay Kumar.png" 
+                             alt="Pratap Sanjay Kumar" 
+                             onerror="this.onerror=null; this.src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAPnClv9xv_OCPYtcWC3Gisu1IUBC_3bAR86ix1MIc4CUuIagvDSJVu10XFqy_rc323Ui5MT6Hg0BYypMCtL6D2Y2hOjz-v4wAUh9RobPL13V9Pwo0g8gVQ0wDefIa95pnJCpxAsqFJ3rdbXy-RspHMLhyphenhyphenyCWqrr-l2Ku041_uwlvSx22XG5r1z9zIfcqD/s1600/android-chrome-192x192.png';" 
+                             class="w-12 h-12 rounded-full object-cover border border-orange-500">
+                        <div>
+                            <div class="text-sm font-bold text-white">Pratap Sanjay Kumar</div>
+                            <div class="text-[11px] text-orange-400">AcademeX Lead Mentor</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 pt-1">Have a doubt in Class 7 Science, Maths, or SST? Connect directly on WhatsApp for personal mentorship.</p>
+                    <a href="https://wa.me/917808343396" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg transition-colors">
+                        <i class="fab fa-whatsapp"></i> +91 7808343396
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+                <div>&copy; <span id="currentYear"></span> AcademeX Class 7th CBSE Portal. All rights reserved.</div>
+                <div>Designed for CBSE Class 7th Middle School Learners by Pratap Sanjay Kumar</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Subject Configuration for Class 7 with exact filePrefix (science_1.html, math_1.html, sst_1.html, computer_1.html)
+        const subjectsData = {
+            science: {
+                name: "Science",
+                filePrefix: "science",
+                icon: "fa-flask",
+                colorClass: "emerald",
+                blogBase: "https://class7th-pratapsanjaysir.blogspot.com/search?q=",
+                fallbackBlog: "https://class7th-pratapsanjaysir.blogspot.com/search/label/Science",
+                description: "Introduction Class + 13 Chapters covering NCERT Class 7 Physics, Chemistry, and Biology fundamentals.",
+                chapters: [
+                    { id: "intro", title: "Science Introduction & Foundation Course", category: "Orientation", summary: "Orientation to Class 7 Science syllabus, scientific branches (Physics, Chem, Bio), blueprint & foundational roadmaps." },
+                    { id: 1, title: "Nutrition in Plants", category: "Biology", summary: "Autotrophs, chlorophyll, photosynthesis, stomata, parasitic & saprotrophic nutrition." },
+                    { id: 2, title: "Nutrition in Animals", category: "Biology", summary: "Digestion in humans, alimentary canal, ruminants & digestion in Amoeba." },
+                    { id: 3, title: "Heat", category: "Physics", summary: "Clinical vs laboratory thermometer, conduction, convection, radiation & thermal conductors." },
+                    { id: 4, title: "Acids, Bases and Salts", category: "Chemistry", summary: "Natural indicators, litmus, phenolphthalein, neutralization reaction & everyday salts." },
+                    { id: 5, title: "Physical and Chemical Changes", category: "Chemistry", summary: "Reversible changes, crystallization, rusting of iron & chemical reaction indicators." },
+                    { id: 6, title: "Respiration in Organisms", category: "Biology", summary: "Cellular respiration, aerobic vs anaerobic, human respiratory system & breathing mechanism." },
+                    { id: 7, title: "Transportation in Animals and Plants", category: "Biology", summary: "Circulatory system, heart chambers, blood vessels, pulse rate, xylem & phloem transport." },
+                    { id: 8, title: "Reproduction in Plants", category: "Biology", summary: "Vegetative propagation, budding, fragmentation, spore formation, pollination & fertilization." },
+                    { id: 9, title: "Motion and Time", category: "Physics", summary: "Speed measurement, units of time, simple pendulum, oscillations & distance-time graphs." },
+                    { id: 10, title: "Electric Current and its Effects", category: "Physics", summary: "Circuit symbols, heating effect of electric current, fuse wire & electromagnets." },
+                    { id: 11, title: "Light", category: "Physics", summary: "Rectilinear propagation, reflection from mirrors, spherical mirrors, lenses & rainbow spectrum." },
+                    { id: 12, title: "Forests: Our Lifeline", category: "Ecology", summary: "Canopy, crown of trees, decomposers, food chains & oxygen-carbon dioxide balance." },
+                    { id: 13, title: "Wastewater Story", category: "Environmental", summary: "Sewage, wastewater treatment plant (WWTP), sludge, biogas & sanitation practices." }
+                ]
+            },
+            math: {
+                name: "Mathematics",
+                filePrefix: "math",
+                icon: "fa-calculator",
+                colorClass: "sky",
+                blogBase: "https://class7th-pratapsanjaysir.blogspot.com/search?q=",
+                fallbackBlog: "https://class7th-pratapsanjaysir.blogspot.com/search/label/Math",
+                description: "13 Chapters of NCERT Class 7 Maths with step-by-step methods, formulas, and proofs.",
+                chapters: [
+                    { id: 1, title: "Integers", category: "Number System", summary: "Properties of addition, subtraction, multiplication and division of negative and positive integers." },
+                    { id: 2, title: "Fractions and Decimals", category: "Arithmetic", summary: "Proper/improper fractions, multiplication, reciprocal, decimal operations & place value." },
+                    { id: 3, title: "Data Handling", category: "Statistics", summary: "Arithmetic mean, range, mode, median, double bar graphs & probability." },
+                    { id: 4, title: "Simple Equations", category: "Algebra", summary: "Setting up algebraic equations, transposing method & solving one-variable linear equations." },
+                    { id: 5, title: "Lines and Angles", category: "Geometry", summary: "Complementary, supplementary, adjacent angles, linear pairs & transversal parallel lines." },
+                    { id: 6, title: "The Triangle and its Properties", category: "Geometry", summary: "Medians, altitudes, angle sum property, exterior angle theorem & Pythagoras theorem." },
+                    { id: 7, title: "Comparing Quantities", category: "Commercial Math", summary: "Ratios, percentages, profit & loss, discount calculations & simple interest (P*R*T/100)." },
+                    { id: 8, title: "Rational Numbers", category: "Number System", summary: "Representation on number line, equivalent rationals, standard form & operations." },
+                    { id: 9, title: "Perimeter and Area", category: "Mensuration", summary: "Square, rectangle, parallelogram, triangle, circumference and area of a circle." },
+                    { id: 10, title: "Algebraic Expressions", category: "Algebra", summary: "Monomials, binomials, trinomials, like/unlike terms, addition & evaluating expressions." },
+                    { id: 11, title: "Exponents and Powers", category: "Arithmetic", summary: "Exponential notation, laws of exponents, zero exponent & expressing numbers in standard form." },
+                    { id: 12, title: "Symmetry", category: "Geometry", summary: "Line symmetry, rotational symmetry, angle of rotation & order of symmetry in regular polygons." },
+                    { id: 13, title: "Visualising Solid Shapes", category: "Geometry", summary: "Faces, edges, vertices of 3D shapes, nets of prisms/pyramids & oblique/isometric sketches." }
+                ]
+            },
+            sst: {
+                name: "Social Science",
+                filePrefix: "sst",
+                icon: "fa-globe-asia",
+                colorClass: "amber",
+                blogBase: "https://class7th-pratapsanjaysir.blogspot.com/search?q=",
+                fallbackBlog: "https://class7th-pratapsanjaysir.blogspot.com/search/label/Social%20Science",
+                description: "Introduction Class + 13 Chapters of History (Our Pasts-II), Geography (Our Environment) & Civics.",
+                chapters: [
+                    { id: "intro", title: "Social Science Introduction & Foundation Course", category: "Orientation", summary: "Comprehensive overview of Class 7 Social Science (History, Geography, Civics), timeline understanding & study methodology." },
+                    { id: 1, title: "Tracing Changes Through a Thousand Years", category: "History", summary: "Maps, cartography, terminology, old and new religions, historians and their sources." },
+                    { id: 2, title: "Kings and Kingdoms", category: "History", summary: "Emergence of new dynasties, tripartite struggle, Prashastis, land grants & the Cholas." },
+                    { id: 3, title: "Delhi: 12th to 15th Century", category: "History", summary: "Delhi Sultans, administration, fortifications, Raziyya Sultan, Alauddin Khalji & Muhammad Tughluq." },
+                    { id: 4, title: "The Mughals (16th to 17th Century)", category: "History", summary: "Babur, Akbar's administration, Mansabdari system, revenue (Zabt) & Sulh-i-kul policy." },
+                    { id: 5, title: "Tribes, Nomads and Settled Communities", category: "History", summary: "Tribal societies, Banjara nomads, Gonds kingdom, Garha Katanga & the Ahoms of Assam." },
+                    { id: 6, title: "Devotional Paths to the Divine", category: "History", summary: "Bhakti movement, Alvars, Nayanars, Shankara, Ramanuja, Kabir, Mirabai & Guru Nanak Dev." },
+                    { id: 7, title: "The Making of Regional Cultures", category: "History", summary: "Cheras & Malayalam, Jagannatha cult in Puri, Rajput traditions of heroism & Kathak dance." },
+                    { id: 8, title: "Environment & Inside Our Earth", category: "Geography", summary: "Natural/human environment, crust, mantle, core, rock cycle & igneous, sedimentary, metamorphic rocks." },
+                    { id: 9, title: "Our Changing Earth", category: "Geography", summary: "Lithospheric plates, earthquakes, volcanoes, weathering & work of rivers, waves, ice and wind." },
+                    { id: 10, title: "Air and Water", category: "Geography", summary: "Atmospheric composition, structure, weather vs climate, water cycle, ocean waves & tides." },
+                    { id: 11, title: "Human-Environment Interactions (Tropical & Subtropical)", category: "Geography", summary: "Life in the Amazon Basin and life in the Ganga-Brahmaputra Basin comparative case studies." },
+                    { id: 12, title: "On Equality & State Government", category: "Civics", summary: "Universal adult franchise, equality in Indian democracy, Midday Meal scheme & role of MLAs." },
+                    { id: 13, title: "Understanding Media & Markets Around Us", category: "Civics", summary: "Media censorship, independence, weekly markets, shopping complexes & chain of markets." }
+                ]
+            },
+            computer: {
+                name: "Computer Science",
+                filePrefix: "computer",
+                icon: "fa-desktop",
+                colorClass: "purple",
+                blogBase: "https://class7th-pratapsanjaysir.blogspot.com/search?q=",
+                fallbackBlog: "https://class7th-pratapsanjaysir.blogspot.com/search/label/Computer",
+                description: "7 Practical Chapters covering Number Systems, Excel, HTML, Cyber Safety & Python.",
+                chapters: [
+                    { id: 1, title: "Number Systems & Binary Operations", category: "Foundations", summary: "Binary, decimal, octal and hexadecimal systems, base conversions & binary addition/subtraction." },
+                    { id: 2, title: "Formulas and Functions in MS Excel", category: "Spreadsheets", summary: "Cell references (relative, absolute, mixed), mathematical functions (SUM, AVERAGE, IF) & sorting." },
+                    { id: 3, title: "Advanced Formatting & Charts in Excel", category: "Spreadsheets", summary: "Column, bar, pie charts, legends, data series, sparklines & conditional formatting." },
+                    { id: 4, title: "HTML - Basic Tags & Web Formatting", category: "Web Design", summary: "HTML structure, head, body, headings (h1-h6), paragraphs, font tags, br, hr & background colors." },
+                    { id: 5, title: "Cyber Safety, Viruses & Digital Ethics", category: "Cyber Ethics", summary: "Types of malware, spyware, firewalls, cyber bullying, safe browsing habits & digital footprint." },
+                    { id: 6, title: "Introduction to Python Programming", category: "Coding", summary: "Python IDE, print statements, variables, basic data types (integers, strings) & user input." },
+                    { id: 7, title: "Conditional Statements & Loops in Python", category: "Coding", summary: "If-else conditions, relational operators, for loops, while loops & simple coding programs." }
+                ]
+            }
+        };
+
+        let currentActiveSubject = 'science';
+
+        // Render Chapter Cards with class_7th url format: https://pratapsanjaykumar.github.io/class_7th/${subject.filePrefix}_${chapter.id}.html
+        function renderChapters(subjectKey, filterQuery = '') {
+            const subject = subjectsData[subjectKey];
+            const container = document.getElementById('chaptersContainer');
+            const noResults = document.getElementById('noResultsState');
+            container.innerHTML = '';
+
+            const normalizedQuery = filterQuery.toLowerCase().trim();
+            const filteredChapters = subject.chapters.filter(ch => {
+                return ch.title.toLowerCase().includes(normalizedQuery) ||
+                       ch.summary.toLowerCase().includes(normalizedQuery) ||
+                       ch.category.toLowerCase().includes(normalizedQuery) ||
+                       `chapter ${ch.id}`.toLowerCase().includes(normalizedQuery) ||
+                       `ch ${ch.id}`.toLowerCase().includes(normalizedQuery) ||
+                       (ch.id === 'intro' && ('intro'.includes(normalizedQuery) || 'introduction'.includes(normalizedQuery)));
+            });
+
+            if (filteredChapters.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            filteredChapters.forEach(chapter => {
+                // Exact URL required for Class 7th Notes Page (supports science_intro.html and sst_intro.html)
+                const notesPageUrl = `https://pratapsanjaykumar.github.io/class_7th/${subject.filePrefix}_${chapter.id}.html`;
+                // Blog page query link for this chapter
+                const blogPostUrl = `${subject.blogBase}${encodeURIComponent(chapter.title)}`;
+
+                // Badge and button styling according to subject theme
+                let badgeColor = "bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800";
+                let primaryBtnColor = "bg-emerald-600 hover:bg-emerald-700 text-white";
+                
+                if (subjectKey === 'math') {
+                    badgeColor = "bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 border-sky-300 dark:border-sky-800";
+                    primaryBtnColor = "bg-sky-600 hover:bg-sky-700 text-white";
+                } else if (subjectKey === 'sst') {
+                    badgeColor = "bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border-amber-300 dark:border-amber-800";
+                    primaryBtnColor = "bg-amber-600 hover:bg-amber-700 text-white";
+                } else if (subjectKey === 'computer') {
+                    badgeColor = "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border-purple-300 dark:border-purple-800";
+                    primaryBtnColor = "bg-purple-600 hover:bg-purple-700 text-white";
+                }
+
+                const badgeText = chapter.id === 'intro' ? 'Intro Class' : `Chapter ${chapter.id}`;
+
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-slate-400 dark:hover:border-slate-700 transition flex flex-col justify-between group";
+                
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-black uppercase px-2.5 py-1 rounded-md border ${badgeColor}">
+                                ${badgeText}
+                            </span>
+                            <span class="text-[11px] font-medium text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                                <i class="fas fa-tag text-[10px]"></i> ${chapter.category}
+                            </span>
+                        </div>
+                        
+                        <h4 class="font-bold text-base text-slate-900 dark:text-white group-hover:text-orange-500 transition-colors line-clamp-2">
+                            ${chapter.title}
+                        </h4>
+                        
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                            ${chapter.summary}
+                        </p>
+                    </div>
+
+                    <!-- Dual Links Action Buttons -->
+                    <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                        <!-- 1. Notes Page Link -->
+                        <a href="${notesPageUrl}" target="_blank" class="flex-1 ${primaryBtnColor} text-xs font-bold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 transition shadow-sm hover:scale-[1.02]" title="Open Class 7 HTML notes">
+                            <i class="fas fa-file-lines"></i>
+                            <span>Notes Page</span>
+                        </a>
+
+                        <!-- 2. Blog Page Link -->
+                        <a href="${blogPostUrl}" target="_blank" class="flex-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 transition border border-slate-200 dark:border-slate-700" title="Read on AcademeX Blog">
+                            <i class="fas fa-newspaper text-orange-500"></i>
+                            <span>Blog Post</span>
+                        </a>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Switch Active Subject Tab
+        function switchSubjectTab(subjectKey) {
+            currentActiveSubject = subjectKey;
+            const subject = subjectsData[subjectKey];
+
+            // Reset all tab button styles
+            document.querySelectorAll('.subject-tab-btn').forEach(btn => {
+                btn.className = "subject-tab-btn px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800";
+            });
+
+            // Set active tab styling
+            const activeBtn = document.getElementById(`tab-btn-${subjectKey}`);
+            if (activeBtn) {
+                let activeColor = "bg-emerald-600 text-white shadow-md";
+                if (subjectKey === 'math') activeColor = "bg-sky-600 text-white shadow-md";
+                if (subjectKey === 'sst') activeColor = "bg-amber-600 text-white shadow-md";
+                if (subjectKey === 'computer') activeColor = "bg-purple-600 text-white shadow-md";
+
+                activeBtn.className = `subject-tab-btn active px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all ${activeColor}`;
+            }
+
+            // Update Subject Hub Banner
+            document.getElementById('bannerTitle').innerText = `Class 7th ${subject.name} Chapters`;
+            document.getElementById('bannerDesc').innerText = subject.description;
+            document.getElementById('bannerIcon').innerHTML = `<i class="fas ${subject.icon}"></i>`;
+            
+            const blogLinkBtn = document.getElementById('bannerBlogLink');
+            blogLinkBtn.href = subject.fallbackBlog;
+            blogLinkBtn.innerHTML = `<i class="fas fa-blog"></i> All ${subject.name} Blog Posts`;
+
+            // Reset search input on tab change
+            const searchInput = document.getElementById('chapterSearchInput');
+            if (searchInput) searchInput.value = '';
+            
+            renderChapters(subjectKey);
+        }
+
+        // Switch Tab AND Smoothly Scroll directly to the Chapter Directory
+        function selectAndScrollSubject(subjectKey) {
+            switchSubjectTab(subjectKey);
+            const directorySection = document.getElementById('chaptersDirectory');
+            if (directorySection) {
+                directorySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Real-time Search Filter for Chapters
+        function filterChapters() {
+            const query = document.getElementById('chapterSearchInput').value;
+            renderChapters(currentActiveSubject, query);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic current copyright year
+            const currentYearElem = document.getElementById('currentYear');
+            if (currentYearElem) {
+                currentYearElem.innerText = new Date().getFullYear();
+            }
+
+            // Initial render default to science
+            renderChapters('science');
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Theme toggle logic (Dark / Light)
+            const themeBtn = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeBtn && themeIcon) {
+                themeBtn.addEventListener('click', () => {
+                    const isDark = document.documentElement.classList.toggle('dark');
+                    if (isDark) {
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                    } else {
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
