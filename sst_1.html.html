@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Class 7 Geography Notes | By Pratap Sanjay Sir</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+        
+        .flip-card { perspective: 1000px; cursor: pointer; }
+        .flip-card-inner { transition: transform 0.6s; transform-style: preserve-3d; position: relative; }
+        .flip-card:hover .flip-card-inner, .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+        .flip-card-front, .flip-card-back { backface-visibility: hidden; -webkit-backface-visibility: hidden; position: absolute; inset: 0; }
+        .flip-card-back { transform: rotateY(180deg); }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; }
+            .print-full-width { width: 100% !important; margin: 0 !important; max-width: 100% !important; }
+            .page-break { page-break-before: always; }
+            .card-box { border: 1px solid #cbd5e1 !important; box-shadow: none !important; background: #ffffff !important; color: #000000 !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-gradient-to-tr from-amber-500 to-sky-600 text-white p-2.5 rounded-xl shadow-md">
+                    <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold tracking-wider uppercase text-amber-600 dark:text-amber-400 flex items-center gap-1">
+                        <i class="fa-solid fa-award"></i> CBSE Class 7 Geography Notes
+                    </span>
+                    <h1 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-tight">
+                        By Pratap Sanjay Sir
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Header Quick Actions -->
+            <div class="flex items-center gap-2">
+                <button onclick="toggleDarkMode()" class="p-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Toggle Theme">
+                    <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                    <i class="fa-solid fa-sun text-lg hidden dark:block text-amber-400"></i>
+                </button>
+                <button onclick="downloadPDF()" class="flex items-center gap-2 px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-lg shadow-md shadow-emerald-500/20 transition">
+                    <i class="fa-solid fa-file-arrow-down text-base"></i> Download PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <!-- Sticky Sidebar Navigation -->
+            <aside class="lg:col-span-3 space-y-6 no-print">
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-700/80 sticky top-20">
+                    <div class="border-b border-slate-100 dark:border-slate-700 pb-3 mb-3">
+                        <div class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Guided By</div>
+                        <h3 class="text-sm font-extrabold text-slate-900 dark:text-white">Pratap Sanjay Sir</h3>
+                    </div>
+
+                    <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Chapters Index</h4>
+                    <nav class="space-y-1 text-xs">
+                        <a href="#location" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-compass text-sky-500 w-4"></i> 1. Location of India
+                        </a>
+                        <a href="#divisions" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-layer-group text-indigo-500 w-4"></i> 2. Physical Divisions
+                        </a>
+                        <a href="#himalayas" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-mountain text-blue-500 w-4"></i> 3. Northern Mountains
+                        </a>
+                        <a href="#ladakh" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-snowflake text-cyan-500 w-4"></i> 4. Ladakh Cold Desert
+                        </a>
+                        <a href="#plains" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-wheat-awn text-emerald-500 w-4"></i> 5. Gangetic Plains
+                        </a>
+                        <a href="#thar" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-sun text-amber-500 w-4"></i> 6. Thar Desert
+                        </a>
+                        <a href="#plateau" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-shapes text-orange-500 w-4"></i> 7. Peninsular Plateau
+                        </a>
+                        <a href="#coastal" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-water text-teal-500 w-4"></i> 8. Coastal Plains
+                        </a>
+                        <a href="#islands" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-island-tropical text-emerald-600 w-4"></i> 9. Islands
+                        </a>
+                        <a href="#aravalli" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-align-center text-amber-600 w-4"></i> 10. Aravalli Hills
+                        </a>
+                        <a href="#ne-hills" class="flex items-center gap-2 px-3 py-1.5 font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:bg-sky-50 dark:hover:bg-slate-700/50 hover:text-sky-600 transition">
+                            <i class="fa-solid fa-tree text-green-600 w-4"></i> 11. North-Eastern Hills
+                        </a>
+                        <a href="#revision" class="flex items-center gap-2 px-3 py-1.5 font-bold rounded-lg text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 transition">
+                            <i class="fa-solid fa-bolt text-amber-500 w-4"></i> Quick Revision
+                        </a>
+                    </nav>
+
+                    <div class="mt-5 pt-4 border-t border-slate-200 dark:border-slate-700">
+                        <button onclick="downloadPDF()" class="w-full py-2.5 px-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-xl font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 transition">
+                            <i class="fa-solid fa-file-pdf text-amber-400 dark:text-amber-600 text-base"></i> Save Notes as PDF
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="lg:col-span-9 space-y-8 print-full-width">
+
+                <!-- Hero Header Banner -->
+                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-sky-700 via-indigo-700 to-slate-900 p-8 sm:p-10 text-white shadow-xl card-box">
+                    <div class="relative z-10 space-y-3 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-900 shadow-sm">
+                            <i class="fa-solid fa-chalkboard-user"></i> By Pratap Sanjay Sir
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                            Chapter -1 : 🇮🇳 India
+                        </h1>
+                        <p class="text-sky-100 text-sm sm:text-base leading-relaxed">
+                            CBSE Class 7 | Complete Geography  – Handwritten Notes by Pratap Sanjay Sir
+                    </div>
+                    <!-- Decorative Icon Background -->
+                    <div class="absolute -right-6 -bottom-8 opacity-15 pointer-events-none">
+                        <i class="fa-solid fa-earth-asia text-[260px]"></i>
+                    </div>
+                </div>
+
+                <!-- SECTION 1: LOCATION OF INDIA -->
+                <section id="location" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold text-base">1</span>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Location of India</h2>
+                        </div>
+                        <span class="px-3 py-1 bg-sky-50 dark:bg-slate-700 text-sky-700 dark:text-sky-300 text-xs font-semibold rounded-full">CBSE Class 7</span>
+                    </div>
+
+                    <ul class="space-y-2.5 text-sm sm:text-base text-slate-700 dark:text-slate-200">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>India is located in <strong>South Asia</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span><b>Global Position:</b>Located in the <strong>Northern and Eastern Hemispheres (Northeast angle / ईशान कोण)</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>Latitudinal Extent: <strong>8°4′ N to 37°6′ N </strong>(Southernmost point of territory reaches 6°45′ N).</span>
+                            </li>
+                         <li class="flex items-start gap-2.5"></li>
+                           <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>Longitudinal Extent: <strong>68°7′ E to 97°25′ E </strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>The <strong>Tropic of Cancer (23½° N)</strong> passes through 8 Indian states:<b> Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram</b>.</span>
+                        </li>
+                          <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>The Standard Meridian of India (82½° E) passes through 5 states:<strong> Uttar Pradesh, Madhya Pradesh, Chhattisgarh, Odisha, and Andhra Pradesh</strong>. Interestingly, it intersects the Tropic of Cancer at Surguja in Chhattisgarh, making Madhya Pradesh and Chhattisgarh the only two states through which both lines pass.</p> .</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>India is the <strong>7th largest country in the world</strong> (1. Russia --> 2. Canada --> 3. China --> 4. United States --> 5. Brazil --> 6. Australia --> 7. India 🇮🇳 --> 8. Argentina --> 9. Kazakhstan --> 10. Algeria).</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <div>
+                                <span>India is surrounded by:</span>
+                                <ul class="ml-5 mt-1 space-y-1 list-disc text-slate-600 dark:text-slate-300">
+                                    <li><strong>Arabian Sea</strong> in the west</li>
+                                    <li><strong>Bay of Bengal</strong> in the east</li>
+                                    <li><strong>Indian Ocean</strong> in the south</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-dot text-sky-500 mt-1.5 text-xs"></i>
+                            <span>India shares land boundaries with countries such as <strong>Pakistan, Afghanistan, China, Nepal, Bhutan, Bangladesh and Myanmar</strong>.</span>
+                        </li>
+                    </ul>
+<div>
+    <img src="https://edurev.gumlet.io/ApplicationImages/Temp/59_a75a7cbf-39d7-4692-bba3-ae55f2ee6608_lg.png">
+</div>
+                    <div class="card" style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; border: 1px solid #e0e0e0; max-width: 600px; margin: 10px auto; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+
+  <!-- Section 1: Dimensions -->
+  <div style="margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 0;">📏 Dimensions of India</h3>
+    <ul style="line-height: 1.8; color: #333; padding-left: 20px;">
+      <li><strong>North-to-South Distance:</strong> 3,214 km</li>
+      <li><strong>East-to-West Distance:</strong> 2,933 km</li>
+      <li><strong>Distance from Equator:</strong> 876 km</li>
+    </ul>
+  </div>
+
+  <!-- Section 2: Extreme Points -->
+  <div style="margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #e67e22; padding-bottom: 5px;">📍 Important Point</h3>
+    <ul style="line-height: 1.8; color: #333; padding-left: 20px;">
+      <li><strong>Northernmost Point:</strong> Indira Col (PoK) <em>(Undisputed: NJ9842 in Ladakh)</em></li>
+      <li><strong>Southernmost Point (Overall):</strong> Indira Point / Pygmalion Point / Parsons Point (Great Nicobar)</li>
+      <li><strong>Southernmost Point (Mainland):</strong> Kanyakumari (Cape Comorin)</li>
+      <li><strong>Easternmost Point:</strong> Kibithu (Walangu), Arunachal Pradesh</li>
+      <li><strong>Westernmost Point:</strong> Ghuar Mota (Gaur Mata), Gujarat</li>
+    </ul>
+  </div>
+
+  <!-- Section 3: Extra Keyword -->
+  <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; border-radius: 4px;">
+    <h4 style="color: #856404; margin: 0 0 5px 0;">💡 Key Term: Kumari Shifting Cultivation</h4>
+    <p style="color: #856404; margin: 0; font-size: 14px; line-height: 1.5;">
+      Shifting agriculture practiced in the <strong>Western Ghats</strong> is locally known as <strong>Kumari</strong>.
+    </p>
+  </div>
+
+</div>
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpbkhqv6UZWDO7brzZCVle2bchwooQe3ec8N5WGvyn7qkIXtddXzDX5Q&s=10">
+                    </div>
+                </section>
+
+                <!-- SECTION 2: PHYSICAL DIVISIONS -->
+                <section id="divisions" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-base">2</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Physical Divisions of India</h2>
+                    </div>
+
+                    <p class="text-slate-700 dark:text-slate-200 text-sm sm:text-base">
+                        India has <strong>six major physical divisions</strong>:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div class="p-3.5 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
+                            <span class="text-sky-500">1.</span> The Great Mountains of the North
+                        </div>
+                        <div class="p-3.5 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
+                            <span class="text-emerald-500">2.</span> The Northern/Gangetic Plains
+                        </div>
+                        <div class="p-3.5 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
+                            <span class="text-amber-500">3.</span> The Thar Desert
+                        </div>
+                        <div class="p-3.5 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
+                            <span class="text-orange-500">4.</span> The Peninsular Plateau
+                        </div>
+                        <div class="p-3.5 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
+                            <span class="text-teal-500">5.</span> The Coastal Plains
+                        </div>
+                        <div class="p-3.5 bg-slate-50 dark:bg-slate-700/40 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-100 text-sm flex items-center gap-2">
+                            <span class="text-cyan-500">6.</span> The Islands
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 italic">
+                        These divisions differ in their landforms, climate, soil, vegetation and human activities.
+                    </p>
+                </section>
+
+                <!-- SECTION 3: THE GREAT MOUNTAINS OF THE NORTH -->
+                <section id="himalayas" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-base">3</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">The Great Mountains of the North 🏔️</h2>
+                    </div>
+
+                    <p class="text-sm text-slate-700 dark:text-slate-200">
+                        The northern mountains are mainly formed by the <strong>Himalayas</strong>.
+                    </p>
+
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-base text-slate-900 dark:text-white border-l-4 border-blue-500 pl-2">Main features</h3>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                            <li>The Himalayas are <strong>young fold mountains</strong>.</li>
+                            <li>They stretch from <strong>Jammu and Kashmir/Ladakh in the west to Arunachal Pradesh in the east</strong>.</li>
+                            <li>They act as a <strong>natural barrier</strong> between India and the cold winds of Central Asia.</li>
+                            <li>They are the source of many important rivers such as the <strong>Ganga, Yamuna and Brahmaputra</strong>.</li>
+                            <li>They receive snowfall and have many glaciers.</li>
+                        </ul>
+                    </div>
+<div>
+    <img src="https://th.bing.com/th/id/R.593d44831a70fc97136831495d1e28a4?rik=hrpSGNII4Rh4Ew&riu=http%3a%2f%2fteammcq.com%2fwp-content%2fuploads%2f2025%2f04%2fimportant-mountain-ranges-in-india.png&ehk=4l5qEYGEp66C5D2OYQOU%2baZW5gGSVdMBwl7bElZmF5c%3d&risl=&pid=ImgRaw&r=0">
+</div>
+                    <!-- 3 Parallel Ranges -->
+                    <div class="space-y-3 pt-2">
+                        <h3 class="font-bold text-base text-slate-900 dark:text-white border-l-4 border-teal-500 pl-2">Three parallel ranges of the Himalayas</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                            <div class="p-4 rounded-xl bg-blue-50/70 dark:bg-slate-700/50 border border-blue-200 dark:border-slate-600 space-y-1">
+                                <h4 class="font-bold text-blue-900 dark:text-blue-300 text-base">1. Himadri</h4>
+                                <p class="text-slate-600 dark:text-slate-300 font-medium">(Greater Himalayas)</p>
+                                <ul class="space-y-1 pt-2 list-disc list-inside text-slate-700 dark:text-slate-200">
+                                    <li>Highest and most continuous range.</li>
+                                    <li>Many high peaks and glaciers are found here.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-teal-50/70 dark:bg-slate-700/50 border border-teal-200 dark:border-slate-600 space-y-1">
+                                <h4 class="font-bold text-teal-900 dark:text-teal-300 text-base">2. Himachal</h4>
+                                <p class="text-slate-600 dark:text-slate-300 font-medium">(Lesser Himalayas)</p>
+                                <ul class="space-y-1 pt-2 list-disc list-inside text-slate-700 dark:text-slate-200">
+                                    <li>Lies south of the Himadri.</li>
+                                    <li>Famous valleys and hill stations are found here.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-amber-50/70 dark:bg-slate-700/50 border border-amber-200 dark:border-slate-600 space-y-1">
+                                <h4 class="font-bold text-amber-900 dark:text-amber-300 text-base">3. Shiwaliks</h4>
+                                <p class="text-slate-600 dark:text-slate-300 font-medium">(Outer Himalayas)</p>
+                                <ul class="space-y-1 pt-2 list-disc list-inside text-slate-700 dark:text-slate-200">
+                                    <li>Outermost and lowest range.</li>
+                                    <li>Made mainly of loose sediments.</li>
+                                    <li>Lies to the south of Lesser Himalayas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Importance Box -->
+                    <div class="bg-sky-50 dark:bg-sky-950/40 p-4 rounded-xl border border-sky-200 dark:border-sky-800/60 text-xs sm:text-sm space-y-2">
+                        <h4 class="font-bold text-sky-900 dark:text-sky-200 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> ⭐ Importance of the Himalayas
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700 dark:text-slate-200 list-disc list-inside">
+                            <li>Protect India from extremely cold winds.</li>
+                            <li>Cause rainfall by stopping moisture-laden winds.</li>
+                            <li>Provide water through rivers and glaciers.</li>
+                            <li>Support forests and wildlife.</li>
+                            <li class="sm:col-span-2">Important for tourism and agriculture.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: LADAKH - THE COLD DESERT -->
+                <section id="ladakh" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-bold text-base">4</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Ladakh – The Cold Desert of India 🏜️❄️</h2>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                        <li><strong>Ladakh</strong> is a high-altitude region in northern India.</li>
+                        <li>It is called the <strong>Cold Desert of India</strong>.</li>
+                        <li>It lies between the <strong>Karakoram Range and the Himalayas</strong>.</li>
+                        <li>It receives <strong>very little rainfall</strong>.</li>
+                        <li>Winters are extremely cold.</li>
+                        <li>The landscape contains mountains, barren land, glaciers and valleys.</li>
+                    </ul>
+<div>
+    <img src="https://tse3.mm.bing.net/th/id/OIP.WKuCDX6IEuKl6haO8IbK_gHaGl?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div class="p-4 bg-slate-50 dark:bg-slate-700/40 rounded-xl space-y-1 border border-slate-200 dark:border-slate-700">
+                            <h3 class="font-bold text-cyan-700 dark:text-cyan-400 text-base">Vegetation</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-600 dark:text-slate-300">
+                                <li>Vegetation is <strong>sparse</strong> because of the cold and dry climate.</li>
+                                <li>Grass and small shrubs grow in some areas.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 dark:bg-slate-700/40 rounded-xl space-y-1 border border-slate-200 dark:border-slate-700">
+                            <h3 class="font-bold text-cyan-700 dark:text-cyan-400 text-base">People and occupations</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-600 dark:text-slate-300">
+                                <li>People traditionally practise <strong>animal rearing</strong> and limited agriculture.</li>
+                                <li>Animals such as <strong>yak, sheep and goats</strong> are important.</li>
+                                <li>Tourism is also an important activity.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-cyan-50 dark:bg-cyan-950/40 p-4 rounded-xl border border-cyan-200 dark:border-cyan-800/60 text-xs sm:text-sm space-y-1">
+                        <h4 class="font-bold text-cyan-900 dark:text-cyan-200 flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> ⭐ Why is Ladakh called a cold desert?
+                        </h4>
+                        <p class="text-slate-700 dark:text-slate-200">
+                            <strong>Answer:</strong> Because it is <strong>very cold and dry</strong>, with <strong>very little rainfall</strong> and sparse vegetation.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: GANGETIC PLAINS -->
+                <section id="plains" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-base">5</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">The Gangetic Plains 🌾</h2>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                        <li>The Gangetic Plains are part of the <strong>Northern Plains of India</strong>.</li>
+                        <li>They are formed by the deposition of <strong>alluvial soil</strong> brought by rivers.</li>
+                        <li><strong>Major rivers include:</strong> Ganga, Yamuna, Ghaghara, Gandak, Kosi.</li>
+                    </ul>
+<div>
+    <img src="https://i.pinimg.com/originals/49/46/69/494669453c897ed97c46ca406d66723f.jpg">
+</div>
+                    <div class="p-4 rounded-xl bg-emerald-50/60 dark:bg-slate-700/40 border border-emerald-200 dark:border-slate-700 space-y-2">
+                        <h3 class="font-bold text-emerald-900 dark:text-emerald-300 text-base">Main features</h3>
+                        <ul class="space-y-1 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                            <li>The land is <strong>flat and fertile</strong>.</li>
+                            <li>It is one of the most important agricultural regions of India.</li>
+                            <li>Crops such as <strong>rice, wheat, sugarcane and pulses</strong> are grown.</li>
+                            <li>Many large cities and settlements are located here because of fertile soil and water availability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 dark:bg-amber-950/40 p-3.5 rounded-xl border border-amber-200 dark:border-amber-800/60 text-xs sm:text-sm text-amber-900 dark:text-amber-200 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-500 text-lg"></i>
+                        <span>⭐ <strong>Important:</strong> The Northern Plains are among the <strong>most densely populated regions of India</strong>.</span>
+                    </div>
+                </section>
+
+                <!-- SECTION 6: THAR DESERT -->
+                <section id="thar" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-base">6</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">The Thar Desert 🏜️</h2>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                        <li>The <strong>Thar Desert</strong> is mainly located in <strong>western Rajasthan</strong>.</li>
+                        <li>It is also called the <strong>Great Indian Desert</strong>.</li>
+                        <li>It receives <strong>very little rainfall</strong>.</li>
+                        <li>It has sandy soil and sand dunes.</li>
+                        <li>The climate is generally <strong>hot and dry</strong>.</li>
+                    </ul>
+<div>
+    <img src="https://tse1.mm.bing.net/th/id/OIP.DfTFXQRB7itXYNmySl69bgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div class="p-4 bg-amber-50/50 dark:bg-slate-700/40 rounded-xl space-y-1 border border-amber-200 dark:border-slate-700">
+                            <h3 class="font-bold text-amber-800 dark:text-amber-300 text-base">Vegetation</h3>
+                            <p class="text-slate-600 dark:text-slate-300 mb-1">Plants are adapted to dry conditions, such as:</p>
+                            <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200">
+                                <li>Thorny bushes</li>
+                                <li>Cactus-like plants</li>
+                                <li>Grasses</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-amber-50/50 dark:bg-slate-700/40 rounded-xl space-y-1 border border-amber-200 dark:border-slate-700">
+                            <h3 class="font-bold text-amber-800 dark:text-amber-300 text-base">People</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200">
+                                <li>People practise <strong>animal rearing and agriculture</strong> where water is available.</li>
+                                <li>Irrigation has made farming possible in some areas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 dark:bg-amber-950/40 p-3.5 rounded-xl border border-amber-200 dark:border-amber-800/60 text-xs sm:text-sm text-amber-900 dark:text-amber-200 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-500 text-lg"></i>
+                        <span>⭐ <strong>Important:</strong> The <strong>Aravalli Range</strong> lies to the southeast of the Thar Desert.</span>
+                    </div>
+                </section>
+
+                <!-- SECTION 7: PENINSULAR PLATEAU -->
+                <section id="plateau" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-orange-100 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400 flex items-center justify-center font-bold text-base">7</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">The Peninsular Plateau ⛰️</h2>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                        <li>The Peninsular Plateau is a <strong>very old landform</strong>.</li>
+                        <li>It is made mainly of <strong>hard rocks</strong>.</li>
+                        <li>It is roughly triangular in shape.</li>
+                        <li>It is rich in <strong>minerals</strong>.</li>
+                    </ul>
+<div>
+    <img src="https://tse1.mm.bing.net/th/id/OIP.sif5dZnD9WOrmGAdq7XdwwHaFj?r=0&w=638&h=479&rs=1&pid=ImgDetMain&o=7&rm=3">
+</div>
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-base text-slate-900 dark:text-white border-l-4 border-orange-500 pl-2">Two important divisions</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                            <div class="p-4 rounded-xl bg-orange-50/70 dark:bg-slate-700/50 border border-orange-200 dark:border-slate-600 space-y-1">
+                                <h4 class="font-bold text-orange-900 dark:text-orange-300 text-base">Central Highlands</h4>
+                                <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200 pt-1">
+                                    <li>Located north of the Narmada River.</li>
+                                    <li>Includes areas of the <strong>Malwa Plateau</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-purple-50/70 dark:bg-slate-700/50 border border-purple-200 dark:border-slate-600 space-y-1">
+                                <h4 class="font-bold text-purple-900 dark:text-purple-300 text-base">Deccan Plateau</h4>
+                                <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200 pt-1">
+                                    <li>Lies south of the Narmada River.</li>
+                                    <li>It is surrounded by the <strong>Western Ghats and Eastern Ghats</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/40 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm space-y-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white text-base">Importance</h4>
+                        <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200">
+                            <li>Rich in minerals such as <strong>iron ore, coal and manganese</strong>.</li>
+                            <li>Important for mining and industries.</li>
+                            <li>Many rivers flow through the plateau.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- SECTION 8: COASTAL PLAINS -->
+                <section id="coastal" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold text-base">8</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Coastal Plains 🌊</h2>
+                    </div>
+
+                    <p class="text-sm text-slate-700 dark:text-slate-200">
+                        The coastal plains lie between the <strong>Peninsular Plateau and the sea</strong>. They are divided into:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div class="p-4 rounded-xl bg-blue-50/70 dark:bg-slate-700/50 border border-blue-200 dark:border-slate-600 space-y-1">
+                            <h3 class="font-bold text-blue-900 dark:text-blue-300 text-base">Western Coastal Plains</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200 pt-1">
+                                <li>Lie between the <strong>Western Ghats and Arabian Sea</strong>.</li>
+                                <li>Generally <strong>narrower</strong> than the eastern coastal plains.</li>
+                                <li>Important sections include <strong>Konkan and Malabar Coast</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-teal-50/70 dark:bg-slate-700/50 border border-teal-200 dark:border-slate-600 space-y-1">
+                            <h3 class="font-bold text-teal-900 dark:text-teal-300 text-base">Eastern Coastal Plains</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200 pt-1">
+                                <li>Lie between the <strong>Eastern Ghats and Bay of Bengal</strong>.</li>
+                                <li>Generally <strong>wider</strong> than the western coastal plains.</li>
+                                <li>Large river deltas are found here.</li>
+                                <li>Important rivers include <strong>Mahanadi, Godavari, Krishna and Kaveri</strong>.</li>
+                            </ul>
+                        </div>
+                    </div>
+<div>
+    <img src="https://civilspedia.com/wp-content/uploads/2023/04/image-22.jpeg">
+</div>
+                    <!-- Comparison Table -->
+                    <div class="space-y-2 pt-2">
+                        <h3 class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-500"></i> ⭐ Difference
+                        </h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200 dark:border-slate-700">
+                                <thead>
+                                    <tr class="bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white font-bold">
+                                        <th class="p-3 border border-slate-200 dark:border-slate-700">Western Coastal Plains</th>
+                                        <th class="p-3 border border-slate-200 dark:border-slate-700">Eastern Coastal Plains</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200 dark:divide-slate-700 text-slate-700 dark:text-slate-200">
+                                    <tr>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700">Along Arabian Sea</td>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700">Along Bay of Bengal</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700">Generally narrow</td>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700">Generally wider</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700">Few large deltas</td>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700">Large deltas are common</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700 font-semibold text-blue-600 dark:text-blue-400">Konkan & Malabar</td>
+                                        <td class="p-3 border border-slate-200 dark:border-slate-700 font-semibold text-teal-600 dark:text-teal-400">Northern Circars & Coromandel</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 9: ISLANDS -->
+                <section id="islands" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-bold text-base">9</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Islands 🏝️</h2>
+                    </div>
+
+                    <p class="text-sm text-slate-700 dark:text-slate-200">
+                        India has two major groups of islands:
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div class="p-4 rounded-xl bg-teal-50/70 dark:bg-slate-700/50 border border-teal-200 dark:border-slate-600 space-y-1">
+                            <h3 class="font-bold text-teal-900 dark:text-teal-300 text-base">Andaman and Nicobar Islands</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200 pt-1">
+                                <li>Located in the <strong>Bay of Bengal</strong>.</li>
+                                <li>They consist of many islands.</li>
+                                <li>They are known for forests and rich biodiversity.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-sky-50/70 dark:bg-slate-700/50 border border-sky-200 dark:border-slate-600 space-y-1">
+                            <h3 class="font-bold text-sky-900 dark:text-sky-300 text-base">Lakshadweep Islands</h3>
+                            <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200 pt-1">
+                                <li>Located in the <strong>Arabian Sea</strong>.</li>
+                                <li>They are mainly <strong>coral islands</strong>.</li>
+                                <li>They are known for beautiful lagoons and beaches.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 dark:bg-amber-950/40 p-3.5 rounded-xl border border-amber-200 dark:border-amber-800/60 text-xs sm:text-sm text-amber-900 dark:text-amber-200 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-amber-500 text-lg"></i>
+                        <span>⭐ <strong>Easy trick:</strong> Andaman & Nicobar → Bay of Bengal &nbsp;|&nbsp; Lakshadweep → Arabian Sea</span>
+                    </div>
+                </section>
+<div>
+    <img src="https://i.pinimg.com/originals/77/a2/00/77a200f6a3b265edd19720bf378a3d1a.jpg">
+</div>
+                <!-- SECTION 10: ARAVALLI HILLS -->
+                <section id="aravalli" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-base">10</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Aravalli Hills</h2>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 list-disc list-inside">
+                        <li>The <strong>Aravalli Range</strong> is one of the <strong>oldest mountain ranges in India</strong>.</li>
+                        <li>It extends mainly across <strong>Rajasthan</strong>.</li>
+                        <li>It runs roughly from the <strong>northeast towards the southwest</strong>.</li>
+                        <li><strong>Guru Shikhar</strong> in the Aravallis is the highest peak.</li>
+                        <li>The Aravallis help separate the <strong>Thar Desert</strong> from the more fertile regions to its east.</li>
+                    </ul>
+                </section>
+                <div>
+                    <img src="https://cdn.testbook.com/1766217060746-Untitled%20design%20(75).png/1766217062.png">
+                </div>
+
+                <!-- SECTION 11: NORTH-EASTERN HILLS -->
+                <section id="ne-hills" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 space-y-5 card-box">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-700 pb-3">
+                        <span class="w-8 h-8 rounded-lg bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 flex items-center justify-center font-bold text-base">11</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">The North-Eastern Hills 🌳</h2>
+                    </div>
+
+                    <p class="text-sm text-slate-700 dark:text-slate-200">
+                        The north-eastern region has several hills and mountain ranges. Important hills/ranges include:
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-semibold">
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 rounded-lg">Patkai Hills</span>
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 rounded-lg">Naga Hills</span>
+                        <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 rounded-lg">Mizo/Lushai Hills</span>
+                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-950 text-teal-800 dark:text-teal-300 rounded-lg">Garo Hills</span>
+                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-950 text-teal-800 dark:text-teal-300 rounded-lg">Khasi Hills</span>
+                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-950 text-teal-800 dark:text-teal-300 rounded-lg">Jaintia Hills</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-700/40 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm space-y-1">
+                        <h3 class="font-bold text-slate-900 dark:text-white text-base">Main features</h3>
+                        <ul class="space-y-1 list-disc list-inside text-slate-700 dark:text-slate-200">
+                            <li>The region receives <strong>heavy rainfall</strong>.</li>
+                            <li>It has thick forests and rich biodiversity.</li>
+                            <li>Many different tribal communities live here.</li>
+                            <li>The hills and valleys make the region geographically diverse.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 dark:bg-amber-950/40 p-3.5 rounded-xl border border-amber-200 dark:border-amber-800/60 text-xs sm:text-sm text-amber-900 dark:text-amber-200 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-500 text-lg"></i>
+                        <span>⭐ <strong>Meghalaya Hills:</strong> The <strong>Garo, Khasi and Jaintia Hills</strong> are important hill ranges of Meghalaya.</span>
+                    </div>
+                </section>
+<div>
+    <img src="https://tse4.mm.bing.net/th/id/OIP.LGvwLRR_pM28fe39epP5dQHaI9?r=0&w=893&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3">
+</div>
+                <!-- SECTION 12: REVISION & ONE-LINERS -->
+                <section id="revision" class="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl card-box">
+                    <div class="border-b border-slate-700 pb-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1">
+                            <i class="fa-solid fa-bolt"></i> Exam Booster Notes
+                        </span>
+                        <h2 class="text-2xl font-bold text-white">📝 Super-Quick Revision</h2>
+                    </div>
+
+                    <!-- Revision Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs sm:text-sm border-collapse border border-slate-700">
+                            <thead>
+                                <tr class="bg-slate-800 text-amber-400 font-bold">
+                                    <th class="p-3 border border-slate-700">Physical Division</th>
+                                    <th class="p-3 border border-slate-700">Main Feature</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-700 text-slate-200">
+                                <tr>
+                                    <td class="p-3 border border-slate-700 font-bold">Great Mountains of North</td>
+                                    <td class="p-3 border border-slate-700">Himalayas, glaciers, high peaks</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-700 font-bold">Gangetic Plains</td>
+                                    <td class="p-3 border border-slate-700">Flat, fertile alluvial plains</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-700 font-bold">Thar Desert</td>
+                                    <td class="p-3 border border-slate-700">Hot, dry, sandy region</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-700 font-bold">Peninsular Plateau</td>
+                                    <td class="p-3 border border-slate-700">Old rocks, minerals</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-700 font-bold">Coastal Plains</td>
+                                    <td class="p-3 border border-slate-700">Land between plateau and sea</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-slate-700 font-bold">Islands</td>
+                                    <td class="p-3 border border-slate-700">Andaman-Nicobar & Lakshadweep</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Most Important One-Liners -->
+                    <div class="space-y-3 pt-4 border-t border-slate-700">
+                        <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check"></i> ⭐ Most Important One-Liners
+                        </h3>
+                        
+                        <ol class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-200 list-decimal list-inside bg-slate-800/80 p-4 rounded-2xl border border-slate-700">
+                            <li class="p-1"><strong>India is in South Asia.</strong></li>
+                            <li class="p-1"><strong>The Himalayas are young fold mountains.</strong></li>
+                            <li class="p-1"><strong>Ladakh is known as the Cold Desert of India.</strong></li>
+                            <li class="p-1"><strong>The Gangetic Plains are very fertile because of alluvial soil.</strong></li>
+                            <li class="p-1"><strong>The Thar is also called the Great Indian Desert.</strong></li>
+                            <li class="p-1"><strong>The Peninsular Plateau is one of the oldest landforms of India.</strong></li>
+                            <li class="p-1"><strong>Western Coastal Plains lie along the Arabian Sea.</strong></li>
+                            <li class="p-1"><strong>Eastern Coastal Plains lie along the Bay of Bengal.</strong></li>
+                            <li class="p-1"><strong>Lakshadweep consists mainly of coral islands.</strong></li>
+                            <li class="p-1"><strong>Andaman and Nicobar Islands are in the Bay of Bengal.</strong></li>
+                            <li class="p-1"><strong>The Aravallis are among the oldest mountain ranges of India.</strong></li>
+                            <li class="p-1"><strong>The Tropic of Cancer passes through India.</strong></li>
+                        </ol>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 mt-12 text-center text-xs text-slate-500 dark:text-slate-400 no-print">
+        <p class="font-bold text-slate-700 dark:text-slate-300 mb-1">CBSE Class 7 Geography Notes • Prepared By Pratap Sanjay Sir</p>
+        <p>Designed for quick learning, exam preparation and PDF export.</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function downloadPDF() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
