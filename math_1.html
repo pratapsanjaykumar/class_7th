@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Real Numbers & Number System - Handwritten Notes</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti for Quiz -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        accent: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        h1, h2, h3, .heading-font {
+            font-family: 'Outfit', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo & Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                        <i class="fa-solid fa-infinity text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Math Notes</h1>
+                        <p class="text-xs text-brand-600 font-semibold tracking-wide uppercase">Chapter 1: Real Numbers</p>
+                    </div>
+                </div>
+
+                
+
+                <!-- Author Badge -->
+                <div class="flex items-center space-x-2">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                        <i class="fa-solid fa-chalkboard-user mr-1.5"></i> Pratap Sanjay Sir
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-12">
+
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 sm:p-10 shadow-xl">
+            <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute right-1/3 -top-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <div class="relative z-10 max-w-3xl">
+                <span class="inline-block px-3.5 py-1 bg-brand-500/20 text-brand-300 border border-brand-500/30 rounded-full text-xs font-semibold mb-4">
+                    <i class="fa-solid fa-sparkles mr-1"></i> Complete Handwritten Notes - CBSE Board
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Introduction to Real Numbers</h2>
+                          
+            </div>
+        </section>
+
+<div style="width:100%;max-width:800px;margin:20px auto;text-align:center;"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3uhGWWWxUmaJfv8Xu7oZuUjOYgs19psqylc86K3OZekAfBGh4eqYHv1O4NS-cxJpBTgVVJioKDczbVNDjg6z5l1hzSYepSB5_elNW_O2bGRP3-RsY6TLlTVsaA1EI4Ef6urynTmco3dWGEYPCP3taRuFLnAvtglySCz59x0A2uMRRJHRowNFbvb-v-sY/s1600-rw/Colorful%20Playful%20Illustrative%20Pythagorean%20Theorem%20Education%20Presentation%20%281%29.png" alt="Pythagorean Theorem" style="width:100%;height:auto;display:block;border-radius:10px;"></div>
+
+        <section id="hierarchy-section" class="scroll-mt-24 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mt-0.5">Number System Classification Tree</h3>
+                   </div>
+                            </div>
+
+            <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm overflow-x-auto custom-scrollbar">
+                <div class="min-w-[850px] flex flex-col items-center py-6">
+                    
+                    <!-- Root: Number System -->
+                    <div onclick="showDetail('number-system')" class="cursor-pointer group hover:scale-105 transition-all w-72 bg-slate-900 text-white rounded-2xl p-4 text-center shadow-lg border border-slate-700">
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Root</div>
+                        <div class="text-lg font-extrabold text-brand-400 group-hover:text-brand-300">Number System</div>
+                    </div>
+
+                    <div class="w-0.5 h-8 bg-slate-300"></div>
+
+                    <!-- Level 2 Split: Real & Imaginary -->
+                    <div class="w-[620px] h-0.5 bg-slate-300 relative">
+                        <div class="absolute left-0 top-0 w-0.5 h-8 bg-slate-300"></div>
+                        <div class="absolute right-0 top-0 w-0.5 h-8 bg-slate-300"></div>
+                    </div>
+
+                    <div class="flex justify-between w-[680px] pt-8">
+                        <!-- Real Numbers Branch -->
+                        <div class="flex flex-col items-center">
+                            <div onclick="showDetail('real')" class="cursor-pointer group hover:scale-105 transition-all w-72 bg-emerald-600 text-white rounded-2xl p-4 text-center shadow-md">
+                                <div class="text-xs text-emerald-200 font-semibold uppercase">Symbol: ℝ</div>
+                                <div class="text-base font-bold">Real Number (R)</div>
+                            </div>
+                            
+                            <div class="w-0.5 h-8 bg-slate-300"></div>
+                            <div class="w-[280px] h-0.5 bg-slate-300 relative">
+                                <div class="absolute left-0 top-0 w-0.5 h-8 bg-slate-300"></div>
+                                <div class="absolute right-0 top-0 w-0.5 h-8 bg-slate-300"></div>
+                            </div>
+
+                            <!-- Rational & Irrational Sub-branch -->
+                            <div class="flex justify-between w-[320px] pt-8">
+                                <!-- Rational -->
+                                <div class="flex flex-col items-center">
+                                    <div onclick="showDetail('rational')" class="cursor-pointer group hover:scale-105 transition-all w-38 bg-blue-600 text-white rounded-xl p-3 text-center shadow-sm">
+                                        <div class="text-[10px] text-blue-200 uppercase font-semibold">Symbol: Q</div>
+                                        <div class="text-xs font-bold">Rational (Q)</div>
+                                        <div class="text-[10px] text-blue-100 mt-1">p/q (q ≠ 0)</div>
+                                    </div>
+                                    <div class="w-0.5 h-6 bg-slate-300"></div>
+                                    <div class="w-[130px] h-0.5 bg-slate-300 relative">
+                                        <div class="absolute left-0 top-0 w-0.5 h-6 bg-slate-300"></div>
+                                        <div class="absolute right-0 top-0 w-0.5 h-6 bg-slate-300"></div>
+                                    </div>
+                                    <div class="flex justify-between w-[160px] pt-6">
+                                        <div onclick="showDetail('integer')" class="cursor-pointer hover:bg-blue-50 p-2 rounded-xl border border-blue-200 text-center w-20 bg-white shadow-xs transition">
+                                            <div class="text-[10px] font-bold text-blue-800">Integer</div>
+                                            <div class="text-[9px] text-slate-500">...,-1,0,1...</div>
+                                        </div>
+                                        <div onclick="showDetail('fraction')" class="cursor-pointer hover:bg-blue-50 p-2 rounded-xl border border-blue-200 text-center w-20 bg-white shadow-xs transition">
+                                            <div class="text-[10px] font-bold text-blue-800">Fraction</div>
+                                            <div class="text-[9px] text-slate-500">2/3, -3/5</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Irrational -->
+                                <div class="flex flex-col items-center">
+                                    <div onclick="showDetail('irrational')" class="cursor-pointer group hover:scale-105 transition-all w-38 bg-amber-600 text-white rounded-xl p-3 text-center shadow-sm">
+                                        <div class="text-[10px] text-amber-200 uppercase font-semibold">Symbol: P</div>
+                                        <div class="text-xs font-bold">Irrational (P)</div>
+                                        <div class="text-[10px] text-amber-100 mt-1">√3, -√2, π</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Imaginary Numbers Branch -->
+                        <div class="flex flex-col items-center">
+                            <div onclick="showDetail('imaginary')" class="cursor-pointer group hover:scale-105 transition-all w-72 bg-purple-700 text-white rounded-2xl p-4 text-center shadow-md">
+                                <div class="text-xs text-purple-200 font-semibold uppercase">Symbol: i</div>
+                                <div class="text-base font-bold">Imaginary Number (i)</div>
+                                <div class="text-xs text-purple-200 mt-1">i = √(-1), 3i, 2i</div>
+                            </div>
+                            <div class="w-0.5 h-8 bg-slate-300"></div>
+                            <div onclick="showDetail('complex')" class="cursor-pointer group hover:scale-105 transition-all w-56 bg-slate-800 text-white rounded-xl p-3 text-center shadow-sm">
+                                <div class="text-[10px] text-slate-400 uppercase font-semibold">Complex Number (z)</div>
+                                <div class="text-xs font-bold text-purple-300">z = a + ib</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Hierarchy Inspector Box -->
+            <div id="hierarchy-detail-card" class="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl transition-all">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-center space-x-3">
+                        <span id="detail-badge" class="px-3.5 py-1.5 bg-emerald-500 text-white text-xs font-extrabold rounded-full tracking-wide">REAL NUMBER (R)</span>
+                        <h4 id="detail-title" class="text-xl sm:text-2xl font-bold text-white">Click any category above</h4>
+                    </div>
+                    <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-circle-info mr-1 text-brand-400"></i> Interactive Inspector</span>
+                </div>
+                <p id="detail-desc" class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+                     Real numbers are all the numbers that can be
+        represented on a number line.
+                </p>
+                <div class="mt-6 pt-6 border-t border-slate-700/80 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-800/90 p-4 rounded-xl border border-slate-700/60">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider mb-1">Mathematical Formula / Form</span>
+                        <span id="detail-formula" class="text-sm font-mono text-brand-300 font-bold">-</span>
+                    </div>
+                    <div class="bg-slate-800/90 p-4 rounded-xl border border-slate-700/60">
+                        <span class="text-xs font-semibold text-slate-400 block uppercase tracking-wider mb-1">Key Examples</span>
+                        <span id="detail-examples" class="text-sm font-mono text-amber-300 font-bold">-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="numberline-section" class="scroll-mt-24 space-y-6">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="mb-6">
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Visual Tool</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mt-0.5">Interactive Number Line Visualizer</h3>
+                    <p class="text-sm text-slate-500 mt-1">Drag the slider or click preset buttons to pinpoint numbers and instantly see their exact mathematical classification.</p>
+                </div>
+
+                <!-- Number Line Slider & Display -->
+                <div class="space-y-6 max-w-3xl mx-auto py-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Selected Number</span>
+                            <div id="num-display-val" class="text-4xl font-extrabold text-brand-600 font-mono mt-1">0.0</div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Classification</span>
+                            <div id="num-display-class" class="text-sm font-bold text-slate-800 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-xs mt-1">
+                                Whole Number / Integer
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <input type="range" id="number-slider" min="-10" max="10" step="0.5" value="0" 
+                            class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600"
+                            oninput="updateNumberLine(this.value)">
+                        <div class="flex justify-between text-xs text-slate-500 font-mono px-1 font-semibold">
+                            <span>-10</span>
+                            <span>-5</span>
+                            <span>0</span>
+                            <span>+5</span>
+                            <span>+10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Presets -->
+                <div class="mt-8 border-t border-slate-100 pt-6">
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-3">Quick Study Presets:</span>
+                    <div class="flex flex-wrap gap-2.5">
+                        <button onclick="setNumberLineVal(3.14159, 'π (Pi) - Irrational Number')" class="px-3.5 py-2 bg-amber-50 text-amber-800 border border-amber-200 rounded-xl text-xs font-semibold hover:bg-amber-100 transition shadow-xs">
+                            π ≈ 3.14 (Irrational)
+                        </button>
+                        <button onclick="setNumberLineVal(1.414, '√2 - Irrational Number')" class="px-3.5 py-2 bg-amber-50 text-amber-800 border border-amber-200 rounded-xl text-xs font-semibold hover:bg-amber-100 transition shadow-xs">
+                            √2 ≈ 1.414 (Irrational)
+                        </button>
+                        <button onclick="setNumberLineVal(-5, 'Negative Integer')" class="px-3.5 py-2 bg-blue-50 text-blue-800 border border-blue-200 rounded-xl text-xs font-semibold hover:bg-blue-100 transition shadow-xs">
+                            -5 (Negative Integer)
+                        </button>
+                        <button onclick="setNumberLineVal(0.75, '3/4 - Rational Fraction')" class="px-3.5 py-2 bg-blue-50 text-blue-800 border border-blue-200 rounded-xl text-xs font-semibold hover:bg-blue-100 transition shadow-xs">
+                            0.75 (Rational Fraction)
+                        </button>
+                        <button onclick="setNumberLineVal(7, 'Prime / Natural Number')" class="px-3.5 py-2 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl text-xs font-semibold hover:bg-emerald-100 transition shadow-xs">
+                            7 (Prime / Natural Number)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pi vs 22/7 Note Banner -->
+            <div class="bg-indigo-900 text-white p-6 rounded-3xl shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-start space-x-4">
+                    <div class="p-3 bg-indigo-800 rounded-2xl text-amber-300">
+                        <i class="fa-solid fa-lightbulb text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-base">Important Exam Note: π vs 22/7</h4>
+                        <p class="text-xs sm:text-sm text-indigo-200 mt-1 leading-relaxed">
+                            <strong class="text-amber-300">π</strong> is an <strong>Irrational Number</strong> (non-terminating & non-repeating decimal), whereas <strong class="text-emerald-300">22/7</strong> is a <strong>Rational Number</strong> used as a convenient approximate fraction in calculations!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="definitions-section" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center justify-between bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                <div>
+                                       <h3 class="text-2xl font-bold text-slate-900 mt-0.5">Definitions:</h3>
+                                   </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 1. Real Numbers -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-brand-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-base">1</div>
+                            <h4 class="font-bold text-slate-900 text-lg">Real Numbers</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Numbers that can be found on the number line, including both rational and irrational numbers.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-xs font-mono text-brand-700 bg-brand-50 p-3 rounded-xl border border-brand-100">
+                        <strong>Examples:</strong> -3, 0, 1/2, √5, π
+                    </div>
+                </div>
+
+                <!-- 2. Rational Numbers -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-blue-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-base">2</div>
+                            <h4 class="font-bold text-slate-900 text-lg">Rational Numbers</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Numbers that can be expressed as a fraction <span class="font-mono bg-slate-100 px-1.5 py-0.5 rounded font-semibold text-blue-800">p/q</span> of two integers, where <span class="font-mono font-semibold text-blue-800">q ≠ 0</span>.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-xs font-mono text-blue-700 bg-blue-50 p-3 rounded-xl border border-blue-100">
+                        <strong>Examples:</strong> 2/3, -5/7, 4 (4/1), 0.5
+                    </div>
+                </div>
+
+                <!-- 3. Irrational Numbers -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-amber-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-base">3</div>
+                            <h4 class="font-bold text-slate-900 text-lg">Irrational Numbers</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Numbers that cannot be expressed as a simple fraction. Their decimal representation is non-terminating and non-repeating.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-xs font-mono text-amber-700 bg-amber-50 p-3 rounded-xl border border-amber-100">
+                        <strong>Examples:</strong> √3, -√2, π (Pi)
+                    </div>
+                </div>
+
+                <!-- 4. Integers -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-purple-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-base">4</div>
+                            <h4 class="font-bold text-slate-900 text-lg">Integers</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Whole numbers and their negative counterparts. Excludes fractional or decimal values.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-xs font-mono text-purple-700 bg-purple-50 p-3 rounded-xl border border-purple-100">
+                        <strong>Examples:</strong> (..., -3, -2, -1, 0, 1, 2, 3, ...)
+                    </div>
+                </div>
+
+                <!-- 5. Prime Numbers -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-emerald-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-base">5</div>
+                            <h4 class="font-bold text-slate-900 text-lg">Prime Numbers</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Natural numbers greater than 1 that have only two positive divisors: 1 and themselves.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-xs font-mono text-emerald-700 bg-emerald-50 p-3 rounded-xl border border-emerald-100">
+                        <strong>Examples:</strong> (2, 3, 5, 7, 11, 13, 17, ...)
+                    </div>
+                </div>
+
+                <!-- 6. Composite Numbers -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-rose-500 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-base">6</div>
+                            <h4 class="font-bold text-slate-900 text-lg">Composite Numbers</h4>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Natural numbers greater than 1 that have more than two positive factors.
+                        </p>
+                    </div>
+                    <div class="mt-4 text-xs font-mono text-rose-700 bg-rose-50 p-3 rounded-xl border border-rose-100">
+                        <strong>Examples:</strong> (4, 6, 8, 9, 10, 12, 14, 15, ...)
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="properties-section" class="scroll-mt-24 space-y-6">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="mb-6">
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Algebraic Laws</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mt-0.5">Properties of Real Numbers</h3>
+                    <p class="text-sm text-slate-500 mt-1">Real numbers obey fundamental algebraic laws across addition and multiplication.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- 1. Closure -->
+                    <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white transition shadow-xs">
+                        <div class="flex items-center space-x-3 text-brand-700 font-bold text-base mb-2">
+                            <div class="p-2 bg-brand-100 rounded-xl"><i class="fa-solid fa-lock text-sm"></i></div>
+                            <span>1. Closure Property</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">The sum or product of any two real numbers is always a real number.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-slate-900 font-bold">
+                            a + b ∈ ℝ  and  a × b ∈ ℝ
+                        </div>
+                    </div>
+
+                    <!-- 2. Commutative -->
+                    <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white transition shadow-xs">
+                        <div class="flex items-center space-x-3 text-indigo-700 font-bold text-base mb-2">
+                            <div class="p-2 bg-indigo-100 rounded-xl"><i class="fa-solid fa-arrows-rotate text-sm"></i></div>
+                            <span>2. Commutative Property</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Changing the order of operands does not change the result.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-indigo-900 font-bold">
+                            a + b = b + a  and  ab = ba
+                        </div>
+                    </div>
+
+                    <!-- 3. Associative -->
+                    <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white transition shadow-xs">
+                        <div class="flex items-center space-x-3 text-blue-700 font-bold text-base mb-2">
+                            <div class="p-2 bg-blue-100 rounded-xl"><i class="fa-solid fa-layer-group text-sm"></i></div>
+                            <span>3. Associative Property</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Grouping of numbers does not alter the sum or product.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-blue-900 font-bold space-y-1">
+                            <div>(a + b) + c = a + (b + c)</div>
+                            <div>(ab)c = a(bc)</div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Distributive -->
+                    <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white transition shadow-xs">
+                        <div class="flex items-center space-x-3 text-purple-700 font-bold text-base mb-2">
+                            <div class="p-2 bg-purple-100 rounded-xl"><i class="fa-solid fa-diagram-project text-sm"></i></div>
+                            <span>4. Distributive Property</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Multiplying a sum by a number is the same as multiplying each addend individually.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-purple-900 font-bold">
+                            a(b + c) = ab + ac
+                        </div>
+                    </div>
+
+                    <!-- 5. Identity -->
+                    <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white transition shadow-xs">
+                        <div class="flex items-center space-x-3 text-amber-700 font-bold text-base mb-2">
+                            <div class="p-2 bg-amber-100 rounded-xl"><i class="fa-solid fa-fingerprint text-sm"></i></div>
+                            <span>5. Identity Property</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Additive identity is 0; Multiplicative identity is 1.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-amber-900 font-bold space-y-1">
+                            <div>a + 0 = a</div>
+                            <div>a × 1 = a</div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Inverse -->
+                    <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white transition shadow-xs">
+                        <div class="flex items-center space-x-3 text-rose-700 font-bold text-base mb-2">
+                            <div class="p-2 bg-rose-100 rounded-xl"><i class="fa-solid fa-right-left text-sm"></i></div>
+                            <span>6. Inverse Property</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-3">Every real number has an additive inverse and multiplicative inverse.</p>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-xs sm:text-sm text-rose-900 font-bold space-y-1">
+                            <div>Additive: a + (-a) = 0</div>
+                            <div>Multiplicative: a × (1/a) = 1 (a ≠ 0)</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="scroll-mt-24 space-y-6">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm max-w-3xl mx-auto">
+                <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">Self-Assessment</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-0.5">Practice Quiz</h3>
+                        <p class="text-xs sm:text-sm text-slate-500 mt-1">Test your mastery of Sanjay Sir's real numbers notes.</p>
+                    </div>
+                    <span id="quiz-score-badge" class="px-4 py-2 bg-slate-100 text-slate-800 rounded-2xl text-xs font-extrabold shadow-xs">
+                        Score: <span id="quiz-score">0</span> / 3
+                    </span>
+                </div>
+
+                <div id="quiz-box" class="space-y-6">
+                    <!-- Q1 -->
+                    <div class="quiz-q-card p-5 rounded-2xl bg-slate-50 border border-slate-200" data-answered="false">
+                        <p class="font-bold text-sm sm:text-base text-slate-900 mb-4">1. Which of the following is an Irrational Number?</p>
+                        <div class="space-y-2.5">
+                            <button onclick="checkAnswer(this, false, '22/7 is a rational fraction.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                A) 22 / 7
+                            </button>
+                            <button onclick="checkAnswer(this, true, 'Correct! π cannot be written as a simple fraction p/q.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                B) π (Pi)
+                            </button>
+                            <button onclick="checkAnswer(this, false, '-5 is an integer and a rational number.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                C) -5
+                            </button>
+                        </div>
+                        <div class="feedback text-xs sm:text-sm mt-3 font-semibold hidden"></div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="quiz-q-card p-5 rounded-2xl bg-slate-50 border border-slate-200" data-answered="false">
+                        <p class="font-bold text-sm sm:text-base text-slate-900 mb-4">2. What property is represented by <span class="font-mono bg-white px-2 py-0.5 rounded border border-slate-200 text-purple-700">a(b + c) = ab + ac</span>?</p>
+                        <div class="space-y-2.5">
+                            <button onclick="checkAnswer(this, false, 'Commutative property is a + b = b + a.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                A) Commutative Property
+                            </button>
+                            <button onclick="checkAnswer(this, true, 'Correct! This is the Distributive Property over addition.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                B) Distributive Property
+                            </button>
+                            <button onclick="checkAnswer(this, false, 'Associative property involves grouping: (a+b)+c.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                C) Associative Property
+                            </button>
+                        </div>
+                        <div class="feedback text-xs sm:text-sm mt-3 font-semibold hidden"></div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="quiz-q-card p-5 rounded-2xl bg-slate-50 border border-slate-200" data-answered="false">
+                        <p class="font-bold text-sm sm:text-base text-slate-900 mb-4">3. Is 2 considered a Prime Number or Composite Number?</p>
+                        <div class="space-y-2.5">
+                            <button onclick="checkAnswer(this, true, 'Correct! 2 is the smallest and only even Prime Number.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                A) Prime Number (only even prime)
+                            </button>
+                            <button onclick="checkAnswer(this, false, 'Composite numbers have more than 2 divisors.')" class="w-full text-left p-3 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 text-xs sm:text-sm text-slate-700 font-medium transition shadow-xs">
+                                B) Composite Number
+                            </button>
+                        </div>
+                        <div class="feedback text-xs sm:text-sm mt-3 font-semibold hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-slate-700 text-sm">Mathematics Notes — Real Numbers & Number System</p>
+            <p class="mt-1 text-slate-400">Complete Handwritten Notes (Pratap Sanjay Sir) | Class 7th / 8th Syllabus</p>
+        </div>
+    </footer>
+
+    <script>
+        const hierarchyData = {
+            'number-system': {
+                title: 'Number System',
+                badge: 'ROOT CATEGORY',
+                desc: 'The complete universal set of numbers including Real and Imaginary numbers.',
+                formula: 'Complex Form: z = a + ib',
+                examples: 'All real numbers and complex numbers i, 2+3i'
+            },
+            'real': {
+                title: 'Real Numbers (R)',
+                badge: 'REAL NUMBER (R)',
+                desc: 'Includes all numbers on the continuous number line. Comprises both rational and irrational numbers.',
+                formula: 'ℝ = Rational (Q) ∪ Irrational (P)',
+                examples: '-3, 0, 0.75, √2, π, 22/7'
+            },
+            'rational': {
+                title: 'Rational Numbers (Q)',
+                badge: 'RATIONAL (Q)',
+                desc: 'Any number that can be expressed as p/q where p and q are integers and q ≠ 0.',
+                formula: 'Q = { p/q | p, q ∈ Z, q ≠ 0 }',
+                examples: '2/3, -5/7, 0.5, 4'
+            },
+            'irrational': {
+                title: 'Irrational Numbers (P)',
+                badge: 'IRRATIONAL (P)',
+                desc: 'Numbers that cannot be expressed as p/q. Their decimals are non-terminating and non-repeating.',
+                formula: 'Cannot be written as p/q',
+                examples: '√2, √3, -√5, π (Pi)'
+            },
+            'integer': {
+                title: 'Integers (Z)',
+                badge: 'INTEGERS (Z)',
+                desc: 'Whole numbers and their negative opposites. Does not include fractions or decimals.',
+                formula: 'Z = {..., -2, -1, 0, 1, 2, ...}',
+                examples: '-100, -1, 0, 5, 42'
+            },
+            'fraction': {
+                title: 'Fractions',
+                badge: 'FRACTION',
+                desc: 'Represents a part of a whole, written as numerator over denominator.',
+                formula: 'Numerator / Denominator',
+                examples: '1/2, 3/5, -2/9'
+            },
+            'imaginary': {
+                title: 'Imaginary Numbers (i)',
+                badge: 'IMAGINARY (i)',
+                desc: 'Numbers that equal a negative value when squared. iota (i) = √(-1).',
+                formula: 'i = √(-1)  =>  i² = -1',
+                examples: 'i, 2i, 3i, -5i'
+            },
+            'complex': {
+                title: 'Complex Numbers (z)',
+                badge: 'COMPLEX (z)',
+                desc: 'A combination of a Real part and an Imaginary part.',
+                formula: 'z = a + ib',
+                examples: '3 + 2i, 5 - 4i'
+            }
+        };
+
+        function showDetail(key) {
+            const data = hierarchyData[key];
+            if (!data) return;
+
+            document.getElementById('detail-badge').innerText = data.badge;
+            document.getElementById('detail-title').innerText = data.title;
+            document.getElementById('detail-desc').innerText = data.desc;
+            document.getElementById('detail-formula').innerText = data.formula;
+            document.getElementById('detail-examples').innerText = data.examples;
+        }
+
+        function updateNumberLine(val) {
+            const num = parseFloat(val);
+            document.getElementById('num-display-val').innerText = num;
+
+            let classification = "";
+            if (num < 0) {
+                classification = (num % 1 === 0) ? "Negative Integer" : "Negative Rational Number";
+            } else if (num === 0) {
+                classification = "Zero (Whole Number / Integer)";
+            } else {
+                classification = (num % 1 === 0) ? "Positive Integer / Natural Number" : "Positive Rational Fraction";
+            }
+
+            document.getElementById('num-display-class').innerText = classification;
+        }
+
+        function setNumberLineVal(val, classificationStr) {
+            document.getElementById('number-slider').value = val;
+            document.getElementById('num-display-val').innerText = val;
+            document.getElementById('num-display-class').innerText = classificationStr;
+        }
+
+        let score = 0;
+
+        function checkAnswer(btn, isCorrect, feedbackMsg) {
+            const card = btn.closest('.quiz-q-card');
+            const feedbackEl = card.querySelector('.feedback');
+            
+            if (card.getAttribute('data-answered') === 'true') return;
+            card.setAttribute('data-answered', 'true');
+
+            const buttons = card.querySelectorAll('button');
+            buttons.forEach(b => b.classList.add('opacity-50', 'cursor-not-allowed'));
+
+            if (isCorrect) {
+                btn.classList.remove('bg-white', 'opacity-50');
+                btn.classList.add('bg-emerald-600', 'text-white', 'font-bold', 'border-emerald-700');
+                feedbackEl.innerHTML = `<span class="text-emerald-700"><i class="fa-solid fa-circle-check mr-1.5"></i> ${feedbackMsg}</span>`;
+                score++;
+                document.getElementById('quiz-score').innerText = score;
+
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 40,
+                        spread: 60,
+                        origin: { y: 0.8 }
+                    });
+                }
+            } else {
+                btn.classList.remove('bg-white', 'opacity-50');
+                btn.classList.add('bg-rose-600', 'text-white', 'font-bold', 'border-rose-700');
+                feedbackEl.innerHTML = `<span class="text-rose-700"><i class="fa-solid fa-circle-xmark mr-1.5"></i> ${feedbackMsg}</span>`;
+            }
+
+            feedbackEl.classList.remove('hidden');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            showDetail('real');
+        });
+    </script>
+</body>
+</html>
